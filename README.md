@@ -12,7 +12,7 @@ The various components of the application (i.e. HTML, CSS, and JS files) can als
 
 ## Usage
 
-Navigate to either the deployed ([GitHub site](https://msteblu.github.io/PasswordGenerator_JS/)) or open the index.html file in your browser. From there, you can interact with the application, choosing the length of your password and whether or not you would like it to include lowercase, uppercase, numeric, and/or special characters. 
+Navigate to either the deployed [GitHub site](https://msteblu.github.io/PasswordGenerator_JS/) or open the index.html file in your browser. From there, you can interact with the application, choosing the length of your password and whether or not you would like it to include lowercase, uppercase, numeric, and/or special characters. 
 
 ![Screenshot of Application](assets/images/screenshot.png)
 
@@ -22,4 +22,4 @@ Starter code provided by the University of Minnesota Coding Bootcamp.
 
 ## License 
 
-Licensed under the ([MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)) license. 
+Licensed under the [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt) license. 
