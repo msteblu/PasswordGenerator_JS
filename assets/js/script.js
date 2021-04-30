@@ -20,7 +20,7 @@ generateBtn.addEventListener("click", writePassword);
 const lower = "abcdefghijklmnopqrstuvwxyz";
 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numeric = "0123456789"; 
-const special = "!@#$%&?"; //Choosing only the special characters that are normally used in passwords. 
+const special = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 
 // Shuffle with Fisher–Yates
