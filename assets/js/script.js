@@ -13,15 +13,38 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+
+
 // Strings of Choices
 const lower = "abcdefghijklmnopqrstuvwxyz";
 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numeric = "0123456789"; 
 const special = "!@#$%&?"; //Choosing only the special characters that are normally used in passwords. 
 
+
+// Shuffle with Fisher–Yates
+function shuffle(array) {
+  var copy = [], n = array.length, i;
+
+  // While there remain elements to shuffle…
+  while (n) {
+
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * n--);
+
+      // And move it to the new array.
+      copy.push(array.splice(i, 1)[0]);
+  }
+
+  return copy;
+}
+
+
 // Define generatePassword function: 
 let generatePassword = function() {
 
+// While Loop to make sure they choose between 8-128 characters
   let userLength = "0";
   while(userLength < 8 || userLength > 128) {
     userLength = window.prompt("How many characters should the password include? (8-128)");
@@ -30,7 +53,7 @@ let generatePassword = function() {
     }
   };
 
-
+// While Loop to make sure they choose at least one type of character
   let oneSelected = false
   let userLower = false
   let userUpper = false
@@ -50,9 +73,11 @@ let generatePassword = function() {
     }
   };
 
-
+// Make a string of all the possible chosen characters: 
   let selectedChars = ""
+// Count how many types are selected (from Upper, Lower, Numeric, or Special)
   let numberSelected = 0
+//Make a string of final chosen characters: 
   let finalPassword = ""
 
   if (userLower) {
@@ -79,12 +104,12 @@ let generatePassword = function() {
     finalPassword += special.charAt(Math.floor(Math.random() * special.length));
   };
 
-  console.log(selectedChars);
-
   for (i = 0; i < (userLength - numberSelected); i++) {
     finalPassword += selectedChars.charAt(Math.floor(Math.random() * selectedChars.length))
   };
 
-  return(finalPassword);
+
+  let shuffledPassword = finalPassword.split('');
+  return shuffle(shuffledPassword).join('');
 
 }
